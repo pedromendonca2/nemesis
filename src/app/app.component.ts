@@ -10,3 +10,13 @@ import { RouterOutlet } from '@angular/router';
 export class AppComponent {
   title = 'nemesis';
 }
+
+// @Component({
+//   selector: 'app-root',
+//   imports: [RouterOutlet],
+//   templateUrl: './app.component.html',
+//   styleUrl: './app.component.scss'
+// })
+// export class AppComponent {
+//   title = 'nemesis';
+// }

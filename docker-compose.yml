@@ -1,0 +1,22 @@
+# SEMPRE RODE O COMANDO ANTES: "sudo service docker start"
+# makefile
+# "docker compose up"
+
+services:
+    nemesis_flow:
+        container_name: "nemesis_flow"
+        build: # vai pegar do docker file
+            context: .
+        command: sh -c "npm install && ng serve --host=0.0.0.0 --disable-host-check"
+        ports:
+            - "4200:4200" 
+            # um servidor pode ter várias portas
+            # nesse caso, é a porta 4200 do localhost 
+            # 'porta do localhost' : 'porta do docker'
+        volumes:
+            - ./:/web
+        working_dir: /web
+        tty: true
+        stdin_open: true
+        environment:
+            - NG_CLI_ANALYTICS=false

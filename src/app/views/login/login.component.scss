@@ -1,0 +1,24 @@
+h2{
+    font-family: 'Montserrat';
+    font-weight: 800;
+    line-height: 1em;
+    font-size: 25px;
+    color: #130707;
+    margin-left: 20px;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+label {
+  width: 80px; // largura fixa para alinhar os inputs
+  text-align: right;
+}
+
+button {
+  margin-top: 20px; // espaço acima do botão
+  margin-left: 90px; // para alinhar com os inputs (label 80px + gap 10px)
+}

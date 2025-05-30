@@ -1,0 +1,16 @@
+.detail-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+}
+
+.image-container img {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.text-container {
+  flex: 1;
+}

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { AuthService } from '../../services/auth.services'; // caminho conforme seu projeto
 
 @Component({
   selector: 'app-login',
@@ -13,15 +14,20 @@ import { FormsModule } from '@angular/forms';
 export class LoginComponent {
   username = '';
   password = '';
+  role = 'user';
   error = false;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private authService: AuthService) {}
 
   login() {
     if (this.username === 'admin' && this.password === '123') {
+      this.authService.setRole('admin');
+      this.router.navigate(['/home']);
+    } else if (this.username === 'user' && this.password === '123') {
+      this.authService.setRole('user');
       this.router.navigate(['/home']);
     } else {
-      this.error = true;
+      this.error = true; // ativa a mensagem de erro no template
     }
   }
 }

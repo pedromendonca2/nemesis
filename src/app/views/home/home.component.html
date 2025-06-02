@@ -2,11 +2,9 @@
 
 <p>Complete list 📑:</p>
 
-<!-- 
-tenta simplificar isso aí -->
-<div class="container"> 
-  <div *ngFor="let item of items" (click)="verDetalhes(item)"> 
-    <figure>
+<div class="container" tabindex="0"> 
+  <div *ngFor="let item of items" class="item-wrapper"> 
+    <figure (click)="verDetalhes(item)" class="clickable-figure">
       <img [src]= "item.src" [alt]= "item.alt" >
       <figcaption>{{ item.caption }}</figcaption>
     </figure>
@@ -15,14 +13,16 @@ tenta simplificar isso aí -->
 
 <button *ngIf="role === 'admin'" (click)="submit()">Click here</button>
 
-<div *ngIf="deveTocarMusica" style="width: 0; height: 0; overflow: hidden;">
+<div *ngIf="deveTocarMusica" style="width: 1px; height: 1px; overflow: hidden;">
   <iframe
-    src="https://www.youtube.com/embed/cVikZ8Oe_XA?start=25&autoplay=1&controls=0"
+    src="https://www.youtube.com/embed/cVikZ8Oe_XA?start=25&autoplay=1&controls=0&loop=1&playlist=cVikZ8Oe_XA&enablejsapi=1&mute=0"
     frameborder="0"
-    allow="autoplay"
+    allow="autoplay; encrypted-media"
     allowfullscreen>
   </iframe>
 </div>
+
+{{cpf | cpf}} 
 
 <app-composer-detail 
   *ngIf="selectedComposer"

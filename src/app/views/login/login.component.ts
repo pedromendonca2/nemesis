@@ -19,7 +19,7 @@ export class LoginComponent {
 
   constructor(private router: Router, private authService: AuthService) {}
 
-  login() {
+  login() { //usar authservice para autenticar
     if (this.username === 'admin' && this.password === '123') {
       this.authService.setRole('admin');
       this.router.navigate(['/home']);

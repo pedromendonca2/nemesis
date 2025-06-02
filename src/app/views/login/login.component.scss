@@ -1,24 +1,46 @@
-h2{
-    font-family: 'Montserrat';
-    font-weight: 800;
-    line-height: 1em;
-    font-size: 25px;
-    color: #130707;
-    margin-left: 20px;
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form-box {
+  width: 300px;
+  padding: 2rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.05); /* efeito "vidro" */
+  backdrop-filter: blur(15px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.form {
+  width: 300px;
+}
+
+h1{
+  font-family: 'Montserrat';
+  font-weight: 800;
+  line-height: 1em;
+  font-size: 25px;
+  color: #f7f2f2;
+  //margin-left: 20px;
+  //align-self: left;
 }
 
 .form-group {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  margin-bottom: 15px;
 }
 
-label {
-  width: 80px; // largura fixa para alinhar os inputs
-  text-align: right;
+label,
+input {
+  display: block;
+  width: 100%; /* ou ajuste conforme necessário */
+  margin-bottom: 10px;
 }
 
 button {
-  margin-top: 20px; // espaço acima do botão
-  margin-left: 90px; // para alinhar com os inputs (label 80px + gap 10px)
+  margin-top: 10px; // espaço acima do botão
+  //margin-left: 90px; // para alinhar com os inputs (label 80px + gap 10px)
 }

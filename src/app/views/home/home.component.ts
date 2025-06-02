@@ -5,15 +5,18 @@ import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.services';
 import { ComposerDetailComponent } from "../../components/composer-detail/composer-detail.component";
 import { COMPOSERS } from '../../data/composers';
+import { CpfPipe } from '../../pipes/cpf.pipe';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, FormsModule, ComposerDetailComponent],
+  imports: [CommonModule, FormsModule, ComposerDetailComponent, CpfPipe],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
 export class HomeComponent implements OnInit {
+  cpf = 12345678900;
+
   role: string = '';
 
   constructor(private authService: AuthService, private router: Router) {}

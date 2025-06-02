@@ -1,8 +1,5 @@
-import { Component, EventEmitter, Input, Output, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
-//import { ComposerDetailComponent } from './composer-detail.component';
-import { ComposerService } from '../../services/composer.service'; // você vai criar isso
 
 @Component({
   selector: 'app-composer-detail',

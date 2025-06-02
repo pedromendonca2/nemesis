@@ -1,5 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 
+:root {
+  --background: #1a1a2e;
+  --color: #ffffff;
+  --primary-color: #0f3460;
+}
+
 body {
-  background-color: rgb(53, 118, 139);
+    background: var(--background);
+    color: var(--color);
+    letter-spacing: 1px;
+    transition: background 0.2s ease;
 }

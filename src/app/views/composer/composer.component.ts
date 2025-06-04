@@ -1,30 +1,26 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { ComposerDetailComponent } from '../../components/composer-detail/composer-detail.component';
-import { ComposerService } from '../../services/composer.service'; // você vai criar isso
+import { ActivatedRoute, Router } from '@angular/router';
+import { COMPOSERS } from '../../data/composers';
 
 @Component({
   selector: 'app-composer',
   standalone: true,
-  imports: [CommonModule, ComposerDetailComponent],
+  imports: [CommonModule],
   templateUrl: './composer.component.html',
-  styleUrls: ['./composer.component.scss']
+  styleUrl: './composer.component.scss'
 })
 export class ComposerComponent implements OnInit {
   composer: any;
 
-  constructor(
-    private route: ActivatedRoute,
-    private composerService: ComposerService
-  ) {}
+  constructor(private route: ActivatedRoute, private router: Router) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
     const id = Number(this.route.snapshot.paramMap.get('id'));
-    this.composer = this.composerService.getComposerById(id);
+    this.composer = COMPOSERS.find(c => c.id === id);
   }
 
-  fecharDetalhes() {
-    history.back(); // volta pra página anterior
+  voltar() {
+    this.router.navigate(['/home']);
   }
 }

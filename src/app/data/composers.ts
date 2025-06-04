@@ -45,20 +45,20 @@ export const COMPOSERS = [
     },
     {id: 6, src: 'https://cdn.britannica.com/25/67725-004-0811C983/Antonin-Dvorak.jpg', alt: 'Antonin Dvořák', caption: 'Antonin Dvořák', 
         description: 
-        '<strong>Biografia:</strong> Bach foi um compositor alemão do período barroco, conhecido por sua complexidade harmônica e contrapontística. Sua música é considerada um dos pilares da tradição ocidental<br><br>' +
-        '<strong>Principais composições:</strong><br>' +
-        'St Matthew Passion<br>' +
-        'The Well-Tempered Clavier<br>' +
-        'Brandenburg Concertos<br><br>' +
-        '<strong>Curiosidade:</strong> Durante sua vida, Bach não foi tão reconhecido como compositor, sendo mais famoso como organista. Seu legado só foi amplamente redescoberto no século XIX.'
-    },
-    {id: 7, src: 'https://cdn.britannica.com/29/70029-004-74AD88C3/Pyotr-Ilyich-Tchaikovsky-St-Petersburg-Russia-1887.jpg', alt: 'Pyotr Ilyich Tchaikovsky', caption: 'Pyotr Ilyich Tchaikovsky', 
-        description: 
         '<strong>Biografia:</strong> Dvořák foi um compositor tcheco do período romântico, que incorporou elementos do folclore de seu país natal em suas obras. Também teve influência significativa nos Estados Unidos<br><br>' +
         '<strong>Principais composições:</strong><br>' +
         'Symphony No. 9 – From the New World<br>' +
         'Humoresques<br>' +
         'Cello Concerto in B minor<br><br>' +
         '<strong>Curiosidade:</strong> Durante sua estadia nos EUA, Dvořák encorajou compositores americanos a buscarem inspiração nas músicas indígenas e afro-americanas para criar uma identidade musical nacional.'
+    },
+    {id: 7, src: 'https://cdn.britannica.com/29/70029-004-74AD88C3/Pyotr-Ilyich-Tchaikovsky-St-Petersburg-Russia-1887.jpg', alt: 'Pyotr Ilyich Tchaikovsky', caption: 'Pyotr Ilyich Tchaikovsky', 
+        description: 
+        '<strong>Biografia:</strong> Tchaikovsky foi um dos maiores compositores russos do século XIX, conhecido por suas melodias emocionantes e obras para balé, ópera e orquestra<br><br>' +
+        '<strong>Principais composições:</strong><br>' +
+        'Swan Lake<br>' +
+        'Symphony No. 6 – Pathétique<br>' +
+        'Piano Concerto No. 1<br><br>' +
+        '<strong>Curiosidade:</strong> Apesar do sucesso internacional, Tchaikovsky teve uma vida pessoal conturbada e sofreu com a crítica russa, que via sua música como excessivamente ocidentalizada.'
     }
 ];

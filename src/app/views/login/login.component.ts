@@ -17,17 +17,17 @@ export class LoginComponent {
   role = 'user';
   error = false;
 
-  constructor(private router: Router, private authService: AuthService) {}
+  constructor(
+    private router: Router,
+    private authService: AuthService,
+  ) {}
 
-  login() { //usar authservice para autenticar
-    if (this.username === 'admin' && this.password === '123') {
-      this.authService.setRole('admin');
-      this.router.navigate(['/home']);
-    } else if (this.username === 'user' && this.password === '123') {
-      this.authService.setRole('user');
+
+  async login() {
+    if (await this.authService.authenticate(this.username, this.password)) {
       this.router.navigate(['/home']);
     } else {
-      this.error = true; // ativa a mensagem de erro no template
+      this.error = true;
     }
   }
 }

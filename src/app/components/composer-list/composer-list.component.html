@@ -1,0 +1,8 @@
+<div class="container" tabindex="0"> 
+  <div *ngFor="let item of items" class="item-wrapper"> 
+    <figure (click)="selecionar(item)" class="clickable-figure">
+      <img [src]="item.src" [alt]="item.alt">
+      <figcaption>{{ item.caption }}</figcaption>
+    </figure>
+  </div>
+</div>

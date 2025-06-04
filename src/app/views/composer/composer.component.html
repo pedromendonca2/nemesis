@@ -1,9 +1,10 @@
-<app-composer-detail 
-  [composer]="composer"
-  (fechar)="fecharDetalhes()">
-</app-composer-detail>
-
-<!-- Encapsula o app-composer-detail -->
-
-<!-- recebe
-envia -->
+<div *ngIf="composer" class="detail-container">
+  <div class="image-container">
+    <img [src]="composer.src" [alt]="composer.alt" />
+  </div>
+  <div class="text-container">
+    <h2>{{ composer.caption }}</h2>
+    <p [innerHTML]="composer.description"></p>
+    <button (click)="voltar()">Voltar</button>
+  </div>
+</div>

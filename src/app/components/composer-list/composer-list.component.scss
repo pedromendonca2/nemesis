@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  outline: none;
+  scroll-behavior: smooth;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+  }
+}
+
+figure {
+  display: inline-block;
+  margin: 30px;
+
+  img {
+    width: 300px;
+    height: 400px;
+    border-radius: 10px;
+  }
+
+  figcaption {
+    margin-top: 10px;
+    font-size: 16px;
+    color: rgb(251, 251, 252);
+    font-weight: bold;
+    text-align: center;
+  }
+}
+
+.item-wrapper {
+  cursor: pointer;
+}

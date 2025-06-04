@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ComposerDetailComponent } from './composer-detail.component';
+import { ComposerListComponent } from './composer-list.component';
 
-describe('ComposerDetailComponent', () => {
-  let component: ComposerDetailComponent;
-  let fixture: ComponentFixture<ComposerDetailComponent>;
+describe('ComposerListComponent', () => {
+  let component: ComposerListComponent;
+  let fixture: ComponentFixture<ComposerListComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ComposerDetailComponent]
+      imports: [ComposerListComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ComposerDetailComponent);
+    fixture = TestBed.createComponent(ComposerListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

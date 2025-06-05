@@ -2,25 +2,25 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { CpfPipe } from '../../pipes/cpf.pipe';
 import { AuthService } from '../../services/auth.services';
-import { HttpClientModule } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-user',
   standalone: true,
-  imports: [ReactiveFormsModule, HttpClientModule],
+  imports: [ReactiveFormsModule],
   templateUrl: './create-user.component.html',
   styleUrl: './create-user.component.scss',
-  providers: [CpfPipe] // Certifique-se de que CpfPipe está importado corretamente
 })
 export class CreateUserComponent {
-  form: FormGroup;
+  form: FormGroup; // Reactive Forms
   success = false;
   error = false;
+  cpfPipe = new CpfPipe();
 
   constructor(
-    private fb: FormBuilder, 
-    private cpfPipe: CpfPipe,
-    private authService: AuthService
+    private fb: FormBuilder, // Reactive Forms
+    private authService: AuthService,
+    private router: Router
   ) {
     this.form = this.fb.group({
       name: [''],
@@ -47,5 +47,9 @@ export class CreateUserComponent {
     });
 
     console.log('Usuário criado com sucesso!');
+  }
+
+  voltar() {
+    this.router.navigate(['/home']);
   }
 }

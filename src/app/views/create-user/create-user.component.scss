@@ -36,6 +36,11 @@ input {
   margin-bottom: 10px;
 }
 
+.buttons {
+  display: flex;
+  justify-content: space-between; /* espaçamento entre os botões */
+}
+
 button {
   margin-top: 10px; // espaço acima do botão
   //margin-left: 90px; // para alinhar com os inputs (label 80px + gap 10px)

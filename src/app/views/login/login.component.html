@@ -1,25 +1,26 @@
-<body>
-  <section class="container">
-    <div class="login-container">
-      <div class="form-box">
-        <form (ngSubmit)="login()">
-          <h1 class="opacity">LOGIN</h1>
-      
-          <div class="form-group">
-            <label for="username">Usuário:</label>
-            <input id="username" type="text" [(ngModel)]="username" name="username" required />
-          </div>
-      
-          <div class="form-group">
-            <label for="password">Senha:</label>
-            <input id="password" type="password" [(ngModel)]="password" name="password" required />
-          </div>
-      
-          <button type="submit">Entrar</button>
-      
-          <p *ngIf="error" class="error">Usuário ou senha incorretos</p>
-        </form>
-      </div>
+<!-- altera pra reactive hihih forms -->
+
+<section class="container">
+  <div class="login-container">
+    <div class="form-box">
+      <form (ngSubmit)="login()">
+        <h1 class="opacity">LOGIN</h1>
+    
+        <div class="form-group">
+          <label for="username">Usuário:</label>
+          <input id="username" type="text" [(ngModel)]="username" name="username" required />
+        </div>
+    
+        <div class="form-group">
+          <label for="password">Senha:</label>
+          <input id="password" type="password" [(ngModel)]="password" name="password" required />
+        </div>
+    
+        <button type="submit">Entrar</button>
+    
+        <p *ngIf="error" class="error">Usuário ou senha incorretos</p>
+      </form>
     </div>
-  </section>
-</body>
+  </div>
+</section>
+

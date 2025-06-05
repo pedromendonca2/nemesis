@@ -1,8 +1,32 @@
 [
-    {
-        "username": "Creator",
-        "password": "123",
-        "cpf": "12345678900",
-        "role": "admin"
-    }
+  {
+    "username": "Creator",
+    "password": "123",
+    "cpf": "12345678900",
+    "role": "admin"
+  },
+  {
+    "username": "Ennio Morricone",
+    "cpf": "000.000.000-00",
+    "password": "123",
+    "role": "user"
+  },
+  {
+    "username": "John Williams",
+    "cpf": "111.111.111-11",
+    "password": "123",
+    "role": "admin"
+  },
+  {
+    "username": "Danny Elfman",
+    "cpf": "222.222.222-22",
+    "password": "123",
+    "role": "user"
+  },
+  {
+    "username": "Hans Zimmer",
+    "cpf": "444.444.444-44",
+    "password": "123",
+    "role": "admin"
+  }
 ]

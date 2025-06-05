@@ -13,6 +13,6 @@ export class ComposerListComponent {
   @Output() detalhes = new EventEmitter<any>();
 
   selecionar(composer: any) {
-    this.detalhes.emit(composer);
+    this.detalhes.emit(composer); //Emite evento pra mandar como parâmetro lá na home component
   }
 }

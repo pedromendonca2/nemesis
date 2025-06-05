@@ -1,10 +1,9 @@
 import { Directive, Input, TemplateRef, ViewContainerRef } from '@angular/core';
-
 import { AuthService } from '../services/auth.services';
 
 @Directive({
   selector: '[appRole]', 
-  standalone: true       // Permite que a diretiva seja importada diretamente sem precisar de um módulo.
+  standalone: true // Permite que a diretiva seja importada diretamente sem precisar de um módulo.
 })
 export class RoleDirective {
 

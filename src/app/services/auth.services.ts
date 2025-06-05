@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { firstValueFrom } from 'rxjs';
 
-@Injectable({
+@Injectable({ // todo serviço tem um injectable
   providedIn: 'root',
 })
 export class AuthService {

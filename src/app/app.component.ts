@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet], //aqui entram os módulos, tem que entrar home e login
+  imports: [RouterOutlet, HttpClientModule], //aqui entram os módulos, tem que entrar home e login
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

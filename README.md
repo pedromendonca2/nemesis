@@ -1,16 +1,28 @@
-# Nemesis
+# Portfólio de compositores
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.13.
+> Esse é um site criado para, dado um tipo de usuário, acessar uma lista de composites clássicos com informações relevantes sobre cada um deles.
 
-## Development server
+## Execução
 
-To start a local development server, run:
+Criamos um docker para facilitar a execução do projeto. Para usar a aplicação, é preciso instalar o docker em sua máquina (https://www.docker.com/get-started/), clonar este repositório, navegar até a pastadocker e rodar o comando para buildar e subir o container:
 
-```bash
-ng serve
+```sh
+cd nemesis/docker
+
+docker-compose up --build
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Após isso, basta acessar em seu browser a localhost na porta 4200.
+
+Para subir o backend, basta estar na raíz do repositório, abrir outro terminal e rodar o comando para subir o servidor:
+
+```sh
+cd nemesis
+
+node server.js
+```
+
+Após isso, a API já estará escutando na porta 4200, pronta para receber as requisições.
 
 ## Code scaffolding
 
@@ -26,34 +38,16 @@ For a complete list of available schematics (such as `components`, `directives`,
 ng generate --help
 ```
 
-## Building
+## Exemplo de utilização
 
-To build the project run:
+Este vídeo demonstra como utilizar o sistema:
 
-```bash
-ng build
-```
+[![Demonstração do sistema](https://img.youtube.com/vi/ouxK08-g9D0/0.jpg)](https://youtu.be/ouxK08-g9D0)
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## Contribuindo
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+1. Faça um fork (<https://github.com/kampuzzle/PI/fork>)
+2. Crie uma branch de contribuição (`git checkout -b feature/fooBar`)
+3. Faça um commit (`git commit -am 'Adicionando fooBar'`)
+4. Faça o push para a branch (`git push origin feature/fooBar`)
+5. Crie um novo Pull Request

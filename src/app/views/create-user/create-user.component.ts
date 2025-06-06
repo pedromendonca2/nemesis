@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { CpfPipe } from '../../pipes/cpf.pipe';
-import { AuthService } from '../../services/auth.services';
+import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
+import { firstValueFrom } from 'rxjs';
 
 @Component({
   selector: 'app-create-user',
@@ -30,7 +31,7 @@ export class CreateUserComponent {
     });
   }
 
-  onSubmit() {
+  async onSubmit() {
     const newUser = {
       username: this.form.value.name,
       cpf: this.cpfPipe.transform(this.form.value.cpf),
@@ -38,13 +39,14 @@ export class CreateUserComponent {
       role: this.form.value.access === '2' ? 'admin' : 'user'
     };
 
-    this.authService.registerUser(newUser).then(() => {
+    try {
+      await firstValueFrom(this.authService.create(newUser));
       this.success = true;
       this.form.reset({ access: '0' });
       console.log('Usuário criado com sucesso!');
-    }).catch(() => {
+    } catch {
       this.error = true;
-    });
+    }
 
     console.log('Usuário criado com sucesso!');
   }

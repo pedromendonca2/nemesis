@@ -28,5 +28,29 @@
     "cpf": "444.444.444-44",
     "password": "123",
     "role": "admin"
+  },
+  {
+    "username": "Leonard Bernstein",
+    "cpf": "555.555.555-55",
+    "password": "123",
+    "role": "user"
+  },
+  {
+    "username": "Alan Silvestri",
+    "cpf": "666.666.666-66",
+    "password": "123",
+    "role": "admin"
+  },
+  {
+    "username": "Alan Silvestri",
+    "cpf": "666.666.666-66",
+    "password": "123",
+    "role": "admin"
+  },
+  {
+    "username": "Alan Silvestri",
+    "cpf": "666.666.666-66",
+    "password": "123",
+    "role": "admin"
   }
 ]

@@ -23,19 +23,6 @@ node server.js
 ```
 
 Após isso, a API já estará escutando na porta 4200, pronta para receber as requisições.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
 ```
 
 ## Exemplo de utilização
